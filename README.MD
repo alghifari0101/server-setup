@@ -2,6 +2,9 @@
 
 A Bash script that automates the initial configuration of a fresh Linux server (Ubuntu / Debian). Run it once on a new machine and get a secure, ready-to-use environment in minutes.
 
+[![GitHub](https://img.shields.io/badge/GitHub-alghifari0101%2Fserver--setup-181717?logo=github)](https://github.com/alghifari0101/server-setup)
+[![Script](https://img.shields.io/badge/Script-server--setup.sh-4EAA25?logo=gnu-bash)](https://github.com/alghifari0101/server-setup/blob/main/server-setup.sh)
+
 ---
 
 ## 📋 What It Does
@@ -28,12 +31,17 @@ A Bash script that automates the initial configuration of a fresh Linux server (
 
 ## 🚀 Quick Start
 
-### 1. Download the script
+### 1. Clone the repository
 
 ```bash
-curl -O https://your-host/server_setup.sh
-# — or —
-wget https://your-host/server_setup.sh
+git clone https://github.com/alghifari0101/server-setup.git
+cd server-setup
+```
+
+Or download the script directly:
+
+```bash
+curl -O https://raw.githubusercontent.com/alghifari0101/server-setup/main/server-setup.sh
 ```
 
 ### 2. Edit the configuration block
@@ -41,7 +49,7 @@ wget https://your-host/server_setup.sh
 Open the script and update the values at the top before running:
 
 ```bash
-nano server_setup.sh
+nano server-setup.sh
 ```
 
 ```bash
@@ -55,8 +63,8 @@ SERVICES=(ufw fail2ban)     # Services to enable
 ### 3. Make it executable and run
 
 ```bash
-chmod +x server_setup.sh
-sudo ./server_setup.sh
+chmod +x server-setup.sh
+sudo ./server-setup.sh
 ```
 
 ---
@@ -228,7 +236,7 @@ After the script completes, it's recommended to:
 
 **Script fails with "permission denied"**
 ```bash
-sudo ./server_setup.sh
+sudo ./server-setup.sh
 ```
 
 **`apt-get update` fails**
@@ -255,10 +263,18 @@ sudo journalctl -u ufw --no-pager -n 30
 ## 📁 File Structure
 
 ```
-.
-├── server_setup.sh    # Main setup script
+alghifari0101/server-setup
+├── server-setup.sh    # Main setup script
 └── README.md          # This documentation
 ```
+
+---
+
+## 🔗 Links
+
+- **Repository**: [github.com/alghifari0101/server-setup](https://github.com/alghifari0101/server-setup)
+- **Script**: [server-setup.sh](https://github.com/alghifari0101/server-setup/blob/main/server-setup.sh)
+- **Raw download**: [raw.githubusercontent.com/.../server-setup.sh](https://raw.githubusercontent.com/alghifari0101/server-setup/main/server-setup.sh)
 
 ---
 
